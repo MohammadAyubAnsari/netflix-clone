@@ -12,9 +12,3 @@ const NavbarItem: React.FC<NavbarItemProps> = ({ label }) => {
   );
 };
 export default NavbarItem;
-
-// const NavbarItem = () => {
-//   return <div className="text-white cursor-pointer ">Home</div>;
-// };
-
-// export default NavbarItem;

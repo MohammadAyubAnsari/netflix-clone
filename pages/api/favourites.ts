@@ -9,7 +9,6 @@ export default async function handler(
   if (req.method !== "GET") {
     return res.status(405).end();
   }
-
   try {
     const { currentUser } = await serverAuth(req);
 

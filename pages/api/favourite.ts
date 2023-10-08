@@ -10,7 +10,6 @@ export default async function handler(
   try {
     if (req.method === "POST") {
       const { currentUser } = await serverAuth(req);
-
       const { movieId } = req.body;
 
       const existingMovie = await prismadb.movie.findUnique({
@@ -47,7 +46,7 @@ export default async function handler(
         },
       });
 
-      if (existingMovie) {
+      if (!existingMovie) {
         throw new Error("Invalid Id");
       }
 
